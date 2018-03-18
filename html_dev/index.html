@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="less.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/d53d728e14.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+            <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right hidden-lg-up collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <div class="navbar-collapse collapse" id="navbarsExampleDefault" aria-expanded="false">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Help</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+        <div class="container-fluid">
+          <div class="row">
+            <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+                <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clients</a>
+                </li>
+                </ul>
+            </nav>
+            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+                <div>
+                    <h1>Commandes</h1>
+                    <form action="">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th>Ref.</th>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Buy</th>
+                                    <th>Sell</th>
+                                    <th>Tax</th>
+                                    <th>Qty</th>
+                                    <th>Disc</th>
+                                    <th>Profit</th>
+                                    <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SA 12.43</td>
+                                        <td>Cuillere de table</td>
+                                        <td>Cuillere bois pack 12</td>
+                                        <td>2150</td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td>12500</td>
+                                        <td><i class="fa fa-minus-circle" aria-hidden="true" title="delete" onClick={this.remove_product}></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SA 12.43</td>
+                                        <td>Cuillere de table</td>
+                                        <td>Cuillere bois pack 12</td>
+                                        <td>2150</td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td>12500</td>
+                                        <td><i class="fa fa-minus-circle" aria-hidden="true" title="delete" onClick={this.remove_product}></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SA 12.43</td>
+                                        <td>Cuillere de table</td>
+                                        <td>Cuillere bois pack 12</td>
+                                        <td>2150</td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td><input type="text"></td>
+                                        <td>12500</td>
+                                        <td><i class="fa fa-minus-circle" aria-hidden="true" title="delete" onClick={this.remove_product}></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <div class="command-footer-container">
+                        <div class="product-search-container"><div class="product-search-label">Select a product</div><input type="text" onFocus={this.toggle_show_picker}/></div>
+                        <div class="command-totals-container">
+                            <div class="command-inline-container">
+                                <div class="total-container">
+                                    <div class="total-title">Sub-Total</div><div class="total-value">105.22</div>
+                                </div>
+                                <div class="total-container">
+                                    <div class="total-title">VAT</div><div class="total-value">105.22</div>
+                                </div>
+                            </div>
+                            <div class="command-inline-container">
+                                <div class="total-container">
+                                    <div class="total-title">Discount</div><div class="total-value">105.22</div>
+                                </div>
+                                <div class="total-container">
+                                    <div class="total-title">Profit</div><div class="total-value">105.22</div>
+                                </div>
+                            </div>
+                            <div class="command-total-container">
+                                <div class="total-title">Total</div><div class="total-value">105.22</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-forms-buttons d-flex">
+                        <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Add a new Product</button>
+                        <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Add a new Supplier</button>
+                    </div>
+                    <div class="product-form">
+                        <h2>New Product</h2>
+                        <form action="">
+                            <div class="form-group d-flex">
+                                <div class="form-label">Supplier</div>
+                                <input type="text">
+                            </div>
+                            <div class="form-group d-flex">
+                                <div class="form-label">Ref</div>
+                                <input type="text">
+                            </div>
+                            <div class="form-group d-flex">
+                                <div class="form-label">Name</div>
+                                <input type="text">
+                            </div>
+                            <div class="form-group d-flex form-long-input">
+                                <div class="form-label">Description</div>
+                                <input type="text">
+                            </div>
+                            <div class="d-flex price-container justify-content-start">
+                                <div class="form-group d-flex">
+                                    <div class="form-label">Buy Price</div>
+                                    <input type="text">
+                                </div>
+                                <div class="form-group d-flex">
+                                    <div class="form-label">Sell Price</div>
+                                    <input type="text">
+                                </div>
+                                <div class="form-group d-flex">
+                                    <div class="form-label">Tax</div>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <button class="save-product">save product</button>
+                            <button class="cancel">cancel</button>
+                        </form>
+                    </div>
+                    <div class="supplier-form">
+                        <h2>New Supplier</h2>
+                        <form action="">
+                            <div class="form-group d-flex form-long-input">
+                                <div class="form-label">Name</div>
+                                <input type="text">
+                            </div>
+                            <div class="form-group d-flex form-long-input">
+                                <div class="form-label">email</div>
+                                <input type="text">
+                            </div>
+                            <div class="d-flex phone-container">
+                                <div class="form-group d-flex">
+                                    <div class="form-label">phone</div>
+                                    <input type="text">
+                                </div>
+                                <div class="form-group d-flex">
+                                    <div class="form-label">fax</div>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="form-group d-flex form-long-input">
+                                <div class="form-label">website</div>
+                                <input type="text">
+                            </div>
+                            <h5>Contacts</h3>
+                            <div id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex ">
+                                                <div class="form-label">First Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Last Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Occupation</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Phone</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Email</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">First Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Last Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Occupation</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Phone</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Email</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">First Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Last Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Occupation</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Phone</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Email</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>Address</h3>
+                            <div id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#addressOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="addressOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Type</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 1</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 2</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">City</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Zipcode</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Country</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#addressTwo" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="addressTwo" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Type</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 1</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 2</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">City</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Zipcode</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Country</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#addressThree" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>
+                                    </div>
+                                    <div id="addressThree" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-block address-form">
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Type</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 1</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Address Line 2</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">City</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Zipcode</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group d-flex">
+                                                <div class="form-label">Country</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="save-product">save client</button>
+                            <button class="cancel">cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+@table-header-color : #36637a;
+@text-header-color : white;
+@table-background-color : #f0f0f0;
+@border-bottom-color: #eee;
+@input-background-color: #ddd;
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+#root {
+  padding-top: 50px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid @border-bottom-color;
+}
+
+
+//command form
+ table {
+   text-align: center;
+   font-size: 0.8em;
+   thead {
+     background-color: @table-header-color;
+     color: @text-header-color;
+   }
+   th {
+     text-align: center;
+     border-left: 2px solid @text-header-color;
+     border-right: 2px solid @text-header-color;
+     border-bottom: 2px solid @text-header-color;
+     height: 40px;
+   }
+   td {
+     height: 45px;
+     background-color: @table-background-color;
+     text-align: center;
+     border-left: 2px solid @text-header-color;
+     border-right: 2px solid @text-header-color;
+     border-bottom: 2px solid @text-header-color;
+   }
+   &.table td {
+     padding: 0px;
+     vertical-align: middle;
+   }
+   input {
+     font-weight: bold;
+     background-color: @input-background-color;
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 110px;
+     text-align: center;
+     border: none;
+     height: 30px;
+     &:focus{
+       outline: none;
+     }
+   }
+ }
+
+//add new products
+.product-search-container {
+  @product_search_heigh : 40px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+  .product-search-label {
+    margin: 0px;
+    width: 120px;
+    height: @product_search_heigh;
+    padding: 10px;
+    font-size: 0.8em;
+    background-color: #36637a;
+    color:white;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+  }
+  input {
+    margin: 0px;
+    height: @product_search_heigh;
+    padding: 0px;
+    font-size: 0.8em;
+    border:none;
+    background-color: @input-background-color;
+    padding-left: 15px;
+    &:focus {
+      outline:0px;
+    }
+  }
+}
+
+//command totals
+.command-totals-container {
+  @command-total-heigh : 40px;
+  margin-bottom: 20px;
+  //width: 400px;
+  .total-container {
+    border-bottom: 2px solid white;
+    display: inline-block;
+    vertical-align: top;
+    .total-title {
+      display: inline-block;
+      vertical-align: top;
+      width: 100px;
+      height: @command-total-heigh;
+      background-color: #858585;
+      color: @text-header-color;
+      text-align: center;
+      padding: 10px;
+    }
+    .total-value {
+      display: inline-block;
+      vertical-align: top;
+      width: 100px;
+      height: @command-total-heigh;
+      padding: 10px;
+      background-color: @table-background-color;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .command-total-container {
+    .total-title {
+      height: @command-total-heigh;
+      display: inline-block;
+      vertical-align: top;
+      background-color: @table-header-color;
+      color: @text-header-color;
+      width: 204px;
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border-right: 4px solid white;
+    }
+    .total-value {
+      height: @command-total-heigh;
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      background-color: @table-background-color;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+}
+
+//quickforms
+.quick-forms-buttons {
+  button {
+    height: 40px;
+    color: white;
+    background-color: @table-header-color;
+    border: none;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    i {
+      margin-right: 10px;
+    }
+    cursor: pointer;
+  }
+}
+
+
+//product form
+.product-form,.supplier-form{
+  background-color: #e8e8e8;
+  margin-top: 10px;
+  padding: 10px;
+  width: 800px;
+  .form-group {
+    height: 40px;
+    width: 300px;
+    .form-label {
+      background-color: gray;
+      color: white;
+      width: 100px;
+      text-align: center;
+      padding: 10px;
+    }
+    input {
+      padding-left: 15px;
+      width: 200px;
+      border: none;
+      background-color: @table-background-color;
+      &:focus {
+        outline: 0px;
+      }
+    }
+  }
+  .form-long-input {
+    width: 615px;
+    input {
+      width:515px;
+    }
+  }
+  .price-container {
+    .form-group {
+      margin-right: 7px;
+      width: 200px;
+    }
+    input {
+      width: 100px;
+    }
+  }
+  .phone-container {
+    .form-group{
+      margin-right: 7px;
+    }
+  }
+  .address-form {
+    .form-group{
+      width: 500px;
+    }
+    .form-label {
+      width: 200px;
+    }
+    input {
+      width:300px;
+    }
+  }
+}
+
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+.search_wrapper {
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    height: 393px;
+    overflow-y: scroll;
+}
+
+.search_items {
+    max-height: 296px;
+    overflow-y: auto;
+}
+
+.search_item_wrapper {
+    border: 1px solid #ddd;
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search_item_wrapper:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.search_item_wrapper > .glyphicon {
+    color: green;
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+    margin-right: 20px;
+}
+
+.search_item_title {
+    font-size: 100%;
+    margin-bottom: 10px;
+    font-weight: 120;
+    font-weight:600;
+}
+
+.fa-minus-circle {
+    color: red;
+    cursor: pointer;
+}
